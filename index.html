@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+   
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="process_register.php">
+                <h1>ลงทะเบียนใช้งาน</h1>
+                <br>
+                <br>
+                <input type="text" placeholder="ชื่อ-สกุล" name="fullname" />
+                <input type="email" placeholder="อีเมล์" name="email" />
+                <input type="password" placeholder="รหัสผ่าน 10 ตัว" name="password" />
+                <input type="file" name="fileUp" />
+                <span style="color: red; font-weight: bold;">รูปภาพที่สมัครขนาดไฟล์ไม่เกิน 1 MB</span>
+                <br>
+                <button>ลงทะเบียนใช้งาน</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="process_login.php">
+                <h1>เข้าใช้งาน</h1>
+                <br>
+                <br>
+                <input type="email" placeholder="อีเมล์" name="email" />
+                <input type="password" placeholder="รหัสผ่าน" name="password" />
+                <a href="#">คุณลืมรหัสผ่านใช่ไหม ?</a>
+                <button>เข้าสู่ระบบ</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>ยินดีต้อนรับ กลับมาอีกครั้ง!</h1>
+                    <p>โปรดเข้าระบบด้วยข้อมูลที่คุณเคยลงทะเบียนไว้</p>
+                    <button class="ghost" id="signIn">เข้าสู่ระบบ</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>สวัสดี, สมาชิก!</h1>
+                    <p>ป้อนข้อมูลรายละเอียดของตนเอง ลงทะเบียนเพื่อใช้งาน</p>
+                    <button class="ghost" id="signUp">ลงทะเบียนใช้งาน</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
