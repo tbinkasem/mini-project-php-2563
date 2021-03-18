@@ -3,7 +3,7 @@
     include "conf.php";
 	session_start();
     
-	$strSQL = "SELECT * FROM member WHERE email = '".mysqli_real_escape_string($_POST['txtEmail'])."' and password = '".mysqli_real_escape_string($_POST['txtPassword'])."'";
+	$strSQL = "SELECT * FROM member WHERE email = '".mysqli_real_escape_string($conn, $_POST['txtEmail'])."' and password = '".mysqli_real_escape_string($conn, $_POST['txtPassword'])."'";
 	$objQuery = mysqli_query($conn, $strSQL);
 	$objResult = mysqli_fetch_array($objQuery);
 	if(!$objResult)

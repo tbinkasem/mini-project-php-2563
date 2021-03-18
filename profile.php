@@ -33,7 +33,13 @@
             </div>
             <br>
             <div>
-               <a href="data.php" class="btn">เปิดดูข้อมูลส่วนตัว</a>
+               <a href="data.php" class="btn1">ข้อมูลส่วนตัว</a>
+            </div>
+            <br><br>
+            <div>
+               <a href="logout.php" class="btn2">
+                  ออกจากระบบ
+               </a>
             </div>
          </div>
       </div>
