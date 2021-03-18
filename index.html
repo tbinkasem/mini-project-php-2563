@@ -11,13 +11,13 @@
    
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="process_register.php">
+            <form action="process_register.php" method="post" enctype="multipart/form-data">
                 <h1>ลงทะเบียนใช้งาน</h1>
                 <br>
                 <br>
-                <input type="text" placeholder="ชื่อ-สกุล" name="fullname" />
-                <input type="email" placeholder="อีเมล์" name="email" />
-                <input type="password" placeholder="รหัสผ่าน 10 ตัว" name="password" />
+                <input type="text" placeholder="ชื่อ-สกุล" name="txtFullName" />
+                <input type="email" placeholder="อีเมล์" name="txtEmail" />
+                <input type="password" placeholder="รหัสผ่าน 10 ตัว" name="txtPassword" />
                 <input type="file" name="fileUp" />
                 <span style="color: red; font-weight: bold;">รูปภาพที่สมัครขนาดไฟล์ไม่เกิน 1 MB</span>
                 <br>
@@ -25,12 +25,12 @@
             </form>
         </div>
         <div class="form-container sign-in-container">
-            <form action="process_login.php">
+            <form action="process_login.php" method="post">
                 <h1>เข้าใช้งาน</h1>
                 <br>
                 <br>
-                <input type="email" placeholder="อีเมล์" name="email" />
-                <input type="password" placeholder="รหัสผ่าน" name="password" />
+                <input type="email" placeholder="อีเมล์" name="txtEmail" />
+                <input type="password" placeholder="รหัสผ่าน" name="txtPassword" />
                 <a href="#">คุณลืมรหัสผ่านใช่ไหม ?</a>
                 <button>เข้าสู่ระบบ</button>
             </form>

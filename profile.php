@@ -1,3 +1,13 @@
+<?php
+   
+   include "conf.php";
+   session_start();
+
+   $email = $_SESSION["Email"];
+	$fullname = $_SESSION["Fullname"];
+   $photo = $_SESSION["photo"];
+
+?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -8,17 +18,17 @@
       <div class="card-container">
          <div class="upper-container">
             <div class="image-container">
-               <img src="images/profile.jpg" />
+               <img src="images/<?php echo $photo; ?>" />
             </div>
          </div>
          <div class="lower-container">
             <div>
-               <h3>Teera Binkasem</h3>
+               <h3><?php  echo $fullname; ?></h3>
                <h4>Front-end Developer</h4>
             </div>
             <div>
                <p>
-                   Email : tbinkasem@gmail.com
+                   Email : <?php echo $email; ?>
                </p>
             </div>
             <br>
