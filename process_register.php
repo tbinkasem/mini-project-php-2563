@@ -56,9 +56,6 @@
                 if(!$sql){
                     echo "ไม่สามารถเพิ่มข้อมูลได้";
                 }
-                // else{
-                //     echo "<meta http-equiv='refresh' content='3; url=profile.php'>";
-                // }
             }
         } else {
             echo "ไม่สามารถ Upload ไฟล์ได้";
