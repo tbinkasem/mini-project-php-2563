@@ -8,13 +8,16 @@
 	$objResult = mysqli_fetch_array($objQuery);
 	if(!$objResult)
 	{
-		echo "อีเมล์ หรือ รหัสผ่านไม่ถูกต้อง!";
+		echo "<h1 style='color: red'>อีเมล์ หรือ รหัสผ่านไม่ถูกต้อง! รอสักครู่...</h1>";
+        echo "<meta http-equiv='refresh' content='3; url=index.html'>";
 	}
 	else
 	{
 		$_SESSION["Email"] = $objResult["email"];
 		$_SESSION["Fullname"] = $objResult["fullname"];
-        $_SESSION["photo"] = $objResult["photo"];
+        $_SESSION["Photo"] = $objResult["photo"];
+		$_SESSION["Password"] = $objResult["password"];
+		
 		session_write_close();
 		header("location:profile.php");
 	}

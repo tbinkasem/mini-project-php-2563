@@ -5,7 +5,8 @@
 
    $email = $_SESSION["Email"];
 	$fullname = $_SESSION["Fullname"];
-   $photo = $_SESSION["photo"];
+   $photo = $_SESSION["Photo"];
+   $password = $_SESSION["Password"];
 
 ?>
 <!DOCTYPE html>

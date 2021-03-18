@@ -5,7 +5,8 @@
 
    $email = $_SESSION["Email"];
 	$fullname = $_SESSION["Fullname"];
-   $photo = $_SESSION["photo"];
+   // $photo = $_SESSION["Photo"];
+   // $password = $_SESSION["Password"];
 
    $strSQL1 = "SELECT * FROM member WHERE email = '".$email."' ";
 	$objQuery1 = mysqli_query($conn, $strSQL1);
@@ -13,7 +14,6 @@
 
    $strSQL2 = "SELECT * FROM study WHERE email = '".$email."' ";
 	$objQuery2 = mysqli_query($conn, $strSQL2);
-   //$result2 = mysqli_fetch_assoc($objQuery2);
 
 ?>
 <!DOCTYPE html>
@@ -62,8 +62,15 @@
                </td>
             </tr>
             <tr>
+               <th>Preview Photo :</th>
+               <td>
+                  <img src="images/<?php echo $result1['photo']; ?>" alt="<?php echo "my-".$result1['photo']; ?>" width="50%">
+                  
+               </td>
+            </tr>
+            <tr>
                <th colspan="2">
-                  <a href="edit_data.php" class="btnEdit">แก้ไขข้อมูล</a>
+                  <a href="edit_data.php?Email=<?php echo $result1["email"];?>" class="btnEdit">แก้ไขข้อมูล</a>
             </tr>
          </table>
       </div>
