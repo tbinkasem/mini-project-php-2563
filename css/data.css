@@ -1,0 +1,117 @@
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  /* background-color: #f1f1f1; */
+  background-color: #ff00cc;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ff00cc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #f79edc;
+  border-top: none;
+  background-color: #f1ddeb;
+}
+
+table{
+  text-align: center;
+  width: 30%;
+}
+th{
+  text-align: right;
+  width: 50%;
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+td{
+  text-align: left;
+  border: 1px solid black;
+  padding: 5px 5px;
+}
+.btnProfile{
+  width: 150px;
+  height: 30px;
+  font-weight: bolder;
+  background-color: #774caf;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+.btnEdit{
+  width: 60px;
+  height: 20px;
+  font-weight: bolder;
+  background-color: #082cf8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 2px;
+  text-decoration: none;
+}
+.btnDelete{
+  width: 60px;
+  height: 20px;
+  font-weight: bolder;
+  background-color: #f80727;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 2px 2px;
+  text-decoration: none;
+}
+table.data{
+  table-layout: fixed;
+  width: 95%;
+}
+
+th.data{
+  text-align: center;
+  border: 1px solid black;
+}
+td.data{
+  text-align: left;
+  border: 1px solid black;
+  white-space: nowrap;
+}
+td.data1{
+  text-align: center;
+}
+.btnAddData{
+  width: 150px;
+  height: 30px;
+  font-weight: bolder;
+  background-color: #f7f308;
+  color: #0c0b0b;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
