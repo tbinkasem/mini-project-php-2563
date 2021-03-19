@@ -5,8 +5,7 @@
 
    $email = $_SESSION["Email"];
 	$fullname = $_SESSION["Fullname"];
-   // $photo = $_SESSION["Photo"];
-   // $password = $_SESSION["Password"];
+
 
    $strSQL1 = "SELECT * FROM member WHERE email = '".$email."' ";
 	$objQuery1 = mysqli_query($conn, $strSQL1);
@@ -79,15 +78,21 @@
          <h3>ข้อมูลการเรียน</h3>
          <table class="data">
             <tr>
+               <th class="data">ที่</th>
                <th class="data">รหัสวิชา</th>
                <th class="data">ชื่อวิชา</th>
                <th class="data">หน่วยกิต</th>
                <th class="data">ผลการเรียน</th>
+               <th class="data">&nbsp;</th>
             </tr>
             <?php
+               $i = 1;
                while($result2 = mysqli_fetch_array($objQuery2, MYSQLI_ASSOC)){
             ?>
             <tr>
+               <td class="data1">
+                  <?php echo $i; ?>
+               </td>
                <td class="data1">
                   <?php echo $result2['idsub']; ?>
                </td>
@@ -100,8 +105,11 @@
                <td class="data1">
                   <?php echo $result2['grade']; ?>
                </td>
+               <td class="data1">
+                  <a href="delete_data.php?txtID=<?php echo $result2["id"];?>" class="btnDelete">ลบข้อมูล</a>
+               </td>
             </tr>
-            <?php } ?>
+            <?php  $i++; } ?>
          </table>
       </div>
       <script src="js/data.js"></script>

@@ -1,21 +1,14 @@
 <?php
 
     include "conf.php";
-    //session_start();
-
-    //$email = $_SESSION["Email"];
-	//$fullname = $_SESSION["Fullname"];
-    // $photo = $_SESSION["Photo"];
-    // $password = $_SESSION["Password"];
 
     $strEmail  = null;
-
     if(isset($_GET["Email"])){
-	   $strEmail = $_GET["Email"];
+	    $strEmail = $_GET["Email"];
     }
 
     $strSQL = "SELECT * FROM member WHERE email = '".$strEmail."' ";
-	$objQuery = mysqli_query($conn, $strSQL);
+	  $objQuery = mysqli_query($conn, $strSQL);
     $result = mysqli_fetch_array($objQuery, MYSQLI_ASSOC);
 
 ?>
@@ -54,6 +47,11 @@
         </div>
         <div class="button">
           <input type="submit" value="แก้ไขข้อมูล">
+        </div>
+      </form>
+      <form action="data.php">
+        <div class="button">
+          <button href="data.php">กลับไปหน้า [ข้อมูลส่วนตัว]</button>
         </div>
       </form>
     </div>

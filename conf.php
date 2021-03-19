@@ -2,7 +2,8 @@
 
     $server = "localhost";
     $user = "root";
-    $pass = "";
+    $pass = "t768m";
+    //$pass = "";
     $db = "minipro";
 
     $conn = mysqli_connect($server, $user, $pass, $db);

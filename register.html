@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนใช้งาน</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+    <form action="process_register.php" method="post" enctype="multipart/form-data">
+        <div class='bold-line'></div>
+        <div class='container'>
+            <div class='window'>
+                <div class='overlay'></div>
+                <div class='content'>
+                <div class='welcome'>สวัสดี</div>
+                <div class='subtitle'>เราหวังว่า ผู้เข้ามาสมัครทำการลงทะเบียนใช้เรียบร้อยแล้ว สามารถเข้าใช้งานได้ทันที</div>
+                <div class='input-fields'>
+                    <input type='text' placeholder='ชื่อ - สกุล' class='input-line full-width' name="txtFullName"></input>
+                    <input type='email' placeholder='อีเมล์' class='input-line full-width' name="txtEmail"></input>
+                    <input type='password' placeholder='รหัสผ่าน' class='input-line full-width' name="txtPassword"></input>
+                    <input type='file' class='input-line full-width' name="fileUp"></input>
+                </div>
+                <div><button class='ghost-round full-width'>ลงทะเบียนใช้งาน</button></div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
